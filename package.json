@@ -1,1 +1,23 @@
-{}
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "description": "MERN shopping app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otepagustincanilao/learning-mern.git"
+  },
+  "author": "jusepu san",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/otepagustincanilao/learning-mern/issues"
+  },
+  "homepage": "https://github.com/otepagustincanilao/learning-mern#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
