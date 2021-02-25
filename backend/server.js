@@ -6,6 +6,9 @@ import connectDB from './config/db.js'
 // Product router
 import productRoutes from './routes/productRoutes.js'
 
+// Middlewares
+import {notFound, errorHandler} from './middleware/errorMiddleware.js'
+
 dotenv.config()
 
 connectDB()
@@ -16,7 +19,14 @@ app.get('/', (req, res) => {
     res.send('API is running....')
 })
 
+// all of the product related apis
 app.use('/api/products', productRoutes)
+
+// middleware for no matching url request
+app.use(notFound)
+
+// error middleware
+app.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
 const NODE_ENV = process.env.NODE_ENV 
