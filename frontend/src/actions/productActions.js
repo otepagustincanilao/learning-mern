@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { 
     PRODUCT_LIST_REQUEST,
     PRODUCT_LIST_SUCCESS,
@@ -6,6 +7,7 @@ import {
 
 
 export const listProducts = () => async (dispatch) => {
+    console.log(123)
     try{
         dispatch({ type: PRODUCT_LIST_REQUEST })
 
