@@ -16,10 +16,10 @@ const HomeScreen = () => {
     const productList = useSelector(state => state.productList) // result of redux action
     const { loading, error, products } = productList // destructured and get loading, errors and products
 
-    // console.log([1, error])
-
+    // onload palang pinaka nauuna si useEffect mag fire
+    // galing sa action magmumula ang api request
     useEffect(() => {
-       dispatch(listProducts())
+       dispatch(listProducts()) 
     }, [dispatch]) // dependency lang ito
 
     return (
