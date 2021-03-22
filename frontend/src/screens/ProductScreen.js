@@ -25,6 +25,7 @@ const ProductScreen = ({ history, match }) => {
     }, [dispatch])
 
 	const addToCartHandler = () => {
+		// will redirect
 		history.push(`/cart/${match.params.id}?qty=${qty}`)
 	}
 

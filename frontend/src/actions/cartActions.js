@@ -18,6 +18,6 @@ import {
             qty: qty
         }
     })
-
+    // we use stringify bec we can only use json string to localstorage
     localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
  }
