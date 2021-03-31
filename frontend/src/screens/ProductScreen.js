@@ -22,7 +22,7 @@ const ProductScreen = ({ history, match }) => {
 
 	useEffect(() => {
 		dispatch(listProductDetails(match.params.id))
-    }, [dispatch])
+    }, [dispatch, match.params.id])
 
 	const addToCartHandler = () => {
 		// will redirect
